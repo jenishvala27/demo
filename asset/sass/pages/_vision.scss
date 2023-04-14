@@ -1,0 +1,51 @@
+.vision {
+    padding: 110px 0px;
+
+    .goal {
+        padding: 48px;
+        box-shadow: 0 20px 20px 0 rgba(2, 19, 79, 0.1);
+        border-radius: 16px;
+        height: 100%;
+
+        img {
+            width: 100px;
+        }
+
+        h3 {
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 15px;
+        }
+
+        ul {
+            // list-style: none;
+            padding-left: 0px;
+
+            & li {
+                color: #637381;
+                font-size: 15px;
+                margin-bottom: 15px;
+
+                // &::before {
+                //     @include list;
+                // }
+            }
+        }
+
+    }
+
+}
+
+@media (max-width:720px) {
+    .first{
+        order:1;
+    }
+    .second{
+        order:2;
+    }
+    .third{
+        order:2;
+    }
+}

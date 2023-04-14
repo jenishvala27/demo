@@ -1,0 +1,75 @@
+.contact {
+    padding: 70px 0px;
+
+    textarea {
+        box-shadow: none !important;
+
+        &:focus {
+            border: 1px solid $color;
+        }
+    }
+
+    input {
+        box-shadow: none !important;
+
+        &:focus {
+            border: 1px solid $color;
+        }
+    }
+
+    label {
+        color: #919EAB;
+    }
+
+    button {
+        padding: 12px 20px;
+        background-color: $color;
+        border: none;
+        font-weight: 600;
+    }
+
+    button:hover {
+        background-color: $color;
+        opacity: 0.8;
+    }
+
+    h1 {
+        font-size: 48px;
+        margin-bottom: 40px;
+        margin-top: 20px;
+    }
+
+    .about {
+        margin-top: 16px;
+
+        i {
+            width: 28px;
+        }
+
+        p {
+            color: black;
+            font-size: 15px;
+        }
+    }
+}
+
+input:focus+label,
+textarea:focus+label {
+    color: $color;
+}
+
+.des {
+    margin-left: 16px;
+}
+
+.information {
+    padding-top: 15px;
+}
+
+.contact-page {
+    padding-top: 40px;
+
+    .img-fluid {
+        max-width: 75%;
+    }
+}

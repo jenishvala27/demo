@@ -1,0 +1,104 @@
+.case-study {
+    padding: 80px 0px;
+
+    // .nav-tabs {
+    //     border-bottom: none;
+
+    //     .nav-link {
+    //         color: $color;
+    //         border-top: none;
+    //         border-right: none;
+    //         border-left: none;
+    //         border-bottom: 2px solid transparent;
+    //         min-width: 48px;
+    //         font-weight: 600;
+    //         line-height: 1.25;
+    //         font-size: 14px;
+    //         text-transform: capitalize;
+    //         font-family: '__Public_Sans_a5724b', '__Public_Sans_Fallback_a5724b', Helvetica, Arial, sans-serif;
+    //         padding: 10px 45px;
+    //         transition: all 0.3s ease;
+
+    //         &.active {
+    //             color: #212B36;
+    //             background: transparent;
+    //             border-bottom: 2px solid #212B36;
+    //         }
+    //     }
+    // }
+
+    #portfolio {
+        gap: 35px;
+        grid-template-columns: repeat(3, 1fr);
+
+        .card {
+            border: none;
+            background: transparent;
+
+            &:hover .card-img img {
+                opacity: 0.8;
+                transform: scale(1);
+            }
+
+            .card-img {
+                border-radius: 16px;
+                max-height: 336px;
+                overflow: hidden;
+                img {
+                    cursor: pointer;
+                    transform: scale(1.1);
+                    transition: all 0.3s ease;
+                }
+            }
+
+
+            .card-title {
+                font-weight: 700;
+                line-height: 1.5;
+                font-size: 12px;
+                text-transform: uppercase;
+                font-family: '__Public_Sans_a5724b', '__Public_Sans_Fallback_a5724b', Helvetica, Arial, sans-serif;
+                color: #919EAB;
+            }
+
+            .link {
+                cursor: pointer;
+                font-weight: 600;
+                line-height: 1.5;
+                font-size: 15px;
+                font-family: '__Barlow_59217c', '__Barlow_Fallback_59217c', Helvetica, Arial, sans-serif;
+                overflow: hidden;
+                text-transform: lowercase;
+                text-overflow: ellipsis;
+                color: $color;
+                background-position: 0 100%;
+                background-repeat: no-repeat;
+                transition: all .35s ease;
+                background-size: 0 1px;
+            }
+
+            &:hover .link {
+                background-image: linear-gradient(130deg, $color, $color);
+                background-size: 100% 2px;
+            }
+        }
+    }
+}
+
+@media (max-width: 991.98px) {
+    .case-study {
+        #portfolio {
+            gap: 35px;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media (max-width: 576.98px) {
+    .case-study {
+        #portfolio {
+            gap: 35px;
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}

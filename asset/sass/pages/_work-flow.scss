@@ -1,0 +1,104 @@
+@import "mixin";
+
+.work-flow {
+  padding: 80px 0px;
+
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    transition: .8s ease;
+    border-radius: 16px;
+    transform: scale(0, 0);
+  }
+
+  .flow h3 {
+    color:black;
+    font-size: 16px;
+    position: absolute;
+    overflow: hidden;
+    font-weight: 500;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    user-select: none;
+  }
+
+  .effect {
+    overflow: hidden;
+
+    &:hover .overlay {
+      transform: scale(1, 1);
+    }
+  }
+
+  .planing {
+    @include work(#770508, #fdab76, 25px);
+
+    .overlay {
+      @include overlay(#fdab76);
+    }
+  }
+
+  .research {
+    @include work(#063963, #77f0ed, 25px);
+
+    .overlay {
+      @include overlay(#77f0ed);
+    }
+  }
+
+  .Optimizing {
+    @include work(#7a5204, #ffe475, 55px);
+
+    .overlay {
+      @include overlay(#ffe475);
+    }
+  }
+
+  .results {
+    @include work(#02665b, #69f290, 85px);
+
+    .overlay {
+      @include overlay(#69f290);
+    }
+  }
+
+  .text {
+    text-align: end;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 24px;
+  }
+
+  img {
+    opacity: 0.48;
+  }
+}
+
+@media (max-width: 768px) {
+  .work-flow {
+    padding: 40px 0px;
+  }
+
+  .Optimizing {
+    margin-bottom: 30px !important;
+  }
+
+  .results {
+    margin-bottom: 85px !important;
+  }
+}
+
+@media (max-width: 796px) {
+  .work-flow {
+    padding: 50px 0px;
+  }
+}
